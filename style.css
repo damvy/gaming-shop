@@ -259,3 +259,86 @@ nav a:hover {
 .checkout-btn:hover {
     background-color: #e03746;
 }
+/* ===================================================
+   TỐI ƯU GIAO DIỆN CHO THIẾT BỊ DI ĐỘNG (Dưới 768px)
+   =================================================== */
+@media (max-width: 768px) {
+    /* 1. Header & Menu */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .cart-box {
+        margin-left: 0;
+        padding: 5px 12px;
+        font-size: 14px;
+    }
+
+    /* 2. Container & Banner */
+    .container {
+        padding: 20px 15px;
+    }
+
+    .banner {
+        padding: 25px 15px;
+        margin-bottom: 25px;
+    }
+
+    .banner h2 {
+        font-size: 20px;
+    }
+
+    .banner p {
+        font-size: 13px;
+    }
+
+    /* 3. Lưới sản phẩm co về 1 cột trên màn hình nhỏ */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-image {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    /* 4. Tối ưu khung Popup Modal Giỏ hàng */
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .cart-item-name {
+        font-size: 13px;
+    }
+
+    .cart-item-price {
+        font-size: 13px;
+    }
+
+    .cart-summary {
+        font-size: 16px;
+    }
+}
