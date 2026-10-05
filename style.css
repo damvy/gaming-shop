@@ -260,85 +260,76 @@ nav a:hover {
     background-color: #e03746;
 }
 /* ===================================================
-   TỐI ƯU GIAO DIỆN CHO THIẾT BỊ DI ĐỘNG (Dưới 768px)
+   TỐI ƯU GIAO DIỆN DI ĐỘNG CHUẨN (DƯỚI 768PX)
    =================================================== */
 @media (max-width: 768px) {
-    /* 1. Header & Menu */
+    /* Cho logo và cụm menu tách thành 2 hàng rõ ràng */
     .nav-container {
         flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 0 10px;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 15px;
     }
 
+    .logo {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    /* Gom các link điều hướng và giỏ hàng thành một hàng ngang cân đối */
     nav {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 12px;
+        width: 100%;
     }
 
     nav a {
-        margin-left: 0;
+        margin-left: 0 !important; /* Xóa khoảng cách cũ */
         font-size: 14px;
-        padding: 4px 8px;
+        white-space: nowrap;      /* Không bị rớt từng chữ */
     }
 
     .cart-box {
-        margin-left: 0;
-        padding: 5px 12px;
-        font-size: 14px;
+        margin-left: 0 !important;
+        padding: 4px 10px;
+        font-size: 13px;
     }
 
-    /* 2. Container & Banner */
-    .container {
-        padding: 20px 15px;
-    }
-
+    /* Tối ưu Banner */
     .banner {
-        padding: 25px 15px;
+        padding: 24px 15px;
         margin-bottom: 25px;
     }
 
     .banner h2 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .banner p {
         font-size: 13px;
     }
 
-    /* 3. Lưới sản phẩm co về 1 cột trên màn hình nhỏ */
+    /* Lưới sản phẩm co về 1 cột */
     .product-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 16px;
     }
 
     .product-card {
-        padding: 15px;
+        padding: 16px;
     }
 
     .product-image {
-        font-size: 48px;
+        font-size: 46px;
         margin-bottom: 10px;
     }
 
-    /* 4. Tối ưu khung Popup Modal Giỏ hàng */
+    /* Modal giỏ hàng */
     .modal-content {
-        width: 95%;
+        width: 92%;
         padding: 20px 15px;
-    }
-
-    .cart-item-name {
-        font-size: 13px;
-    }
-
-    .cart-item-price {
-        font-size: 13px;
-    }
-
-    .cart-summary {
-        font-size: 16px;
     }
 }
